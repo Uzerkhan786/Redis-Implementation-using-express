@@ -12,7 +12,7 @@ app.get('/', async (req, res) => {
             data: JSON.parse(a)
         })
     }
-    const ab = await fetch('https://toursbooking-6nzn.onrender.com/api/v1/tours');
+    const ab = await fetch('https://dummyjson.com/product');
     const json = await ab.json();
     await redis.set('api', JSON.stringify(json))
     res.json({
